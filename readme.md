@@ -1,12 +1,21 @@
 # VENTOS
 
-Site de uma loja fictícia de garrafas simbólicas inspiradas em destinos, desenvolvido como projeto acadêmico do primeiro semestre de Engenharia de Computação.
+# VENTOS
+
+Meu nome é Guilherme Calheira Sento-Sé Passos e estou no 1º semestre do curso de Engenharia de Computação. Pensei no projeto VENTOS como uma forma divertida de guardar memórias e sensações, e também como uma tentatíva de criar uma experiência diferente: quem já visitou o lugar leva uma recordação, e quem nunca foi leva a curiosidade de imaginar a brisa daquele lugar.
 
 ## Tecnologias utilizadas
 
 - HTML5 para a estrutura das páginas
 - CSS3 para o layout e a identidade visual
 - JavaScript para as interações da página
+
+### Link do projeto hospedado
+https://ventosengarrafados.netlify.app
+
+### link do prototipo do figma
+https://www.figma.com/design/jXcKywyxMmoICH8EwYODEi/Figma-basics?node-id=3839-749&t=s2JvbH0NZmkzVBXT-1
+
 
 ## Como rodar localmente
 
@@ -17,11 +26,10 @@ Site de uma loja fictícia de garrafas simbólicas inspiradas em destinos, desen
 - Extensão Live Server (opcional, recomendada)
 
 ### Passo a passo
-
 1. Baixe o projeto em Code, depois Download ZIP, ou clone pelo terminal:
 
 ```
-git clone https://github.com/USUARIO/ventos.git
+git clone https://github.com/guilhermepassos-art/empresa-junior.git
 ```
 
 2. Extraia a pasta em qualquer diretório do computador.
@@ -35,8 +43,7 @@ Dê dois cliques no arquivo index.html. O site abre direto no navegador.
 
 ### Estrutura de pastas
 
-```
-ventos/
+empresa-junior/
 |-- index.html
 |-- css/
 |   `-- style.css
@@ -44,9 +51,3 @@ ventos/
 |   `-- script.js
 `-- assets/
     `-- imagens do projeto
-```
-
-## Autor
-
-Guilherme Calheira Sento-Sé Passos, 1º semestre de Engenharia de Computação.
-Projeto acadêmico sem fins comerciais.
