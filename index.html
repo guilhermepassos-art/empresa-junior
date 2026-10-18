@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ventos — memórias engarrafadas inspiradas em destinos extraordinários.">
+    <title>VENTOS — Memórias Engarrafadas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Define o tema antes da página aparecer, para evitar piscada de cor -->
+    <script>
+        (function () {
+            var tema = null;
+
+            try {
+                tema = localStorage.getItem("ventos-tema");
+            } catch (erro) {
+                tema = null;
+            }
+
+            if (tema !== "claro" && tema !== "escuro") {
+                tema = window.matchMedia &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "escuro"
+                    : "claro";
+            }
+
+            document.documentElement.setAttribute("data-tema", tema);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- NAVEGAÇÃO -->
+    <header class="navbar">
+        <a href="#inicio" class="logo">
+            <span>≈</span> VENTOS
+        </a>
+
+        <nav id="menuPrincipal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#lugares">Lugares</a>
+            <a href="#contato">Contato</a>
+            <a href="#avaliacoes">Avaliações</a>
+        </nav>
+
+        <div class="area-carrinho">
+            <a href="#lugares" class="botao-nav">Explorar</a>
+
+            <button
+                type="button"
+                class="botao-tema"
+                id="botaoTema"
+                aria-pressed="false"
+                aria-label="Ativar modo escuro">
+                ☾
+            </button>
+
+            <button
+                type="button"
+                class="botao-carrinho"
+                onclick="abrirCarrinho()"
+                aria-label="Abrir carrinho">
+                🛒 <span id="contadorCarrinho">0</span>
+            </button>
+
+            <button
+                type="button"
+                class="botao-menu"
+                id="botaoMenu"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="hero">
+        <div class="hero-texto">
+            <p class="subtitulo">UMA MEMÓRIA QUE VOCÊ PODE TER POR PERTO</p>
+
+            <h1>
+                Alguns lugares
+                <span>nunca deveriam ficar tão longe.</span>
+            </h1>
+
+            <p class="descricao">
+                Existem lugares que deixam marcas na gente.
+                A Ventos transforma a inspiração de destinos
+                extraordinários em lembranças para guardar,
+                colecionar ou presentear alguém especial.
+            </p>
+
+            <div class="botoes">
+                <a href="#lugares" class="botao-principal">
+                    Escolher meu vento →
+                </a>
+
+                <a href="#como-funciona" class="botao-secundario">
+                    Conheça a história
+                </a>
+            </div>
+        </div>
+
+        <!-- GARRAFA -->
+        <div class="garrafa-area">
+            <div class="brilho"></div>
+
+            <div class="garrafa" aria-label="Garrafa Ventos do Everest">
+                <div class="tampa"></div>
+                <div class="gargalo"></div>
+
+                <div class="corpo-garrafa">
+                    <div class="vento">≈</div>
+
+                    <div class="etiqueta">
+                        <small>VENTOS</small>
+                        <strong>EVEREST</strong>
+                        <span>27°59'N · 86°55'E</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+        <div>
+            <p class="subtitulo">SOBRE A VENTOS</p>
+
+            <h2>
+                Não vendemos apenas uma garrafa.
+                <span>Vendemos uma história.</span>
+            </h2>
+
+            <p>
+                Existem lugares que continuam com a gente mesmo depois
+                que vamos embora. A Ventos nasceu para celebrar essa
+                conexão: transformar a inspiração de destinos
+                extraordinários em peças que representam histórias,
+                sonhos e lembranças. Para guardar, colecionar ou
+                presentear alguém especial.
+            </p>
+        </div>
+
+        <div class="estatisticas">
+            <div>
+                <strong>06</strong>
+                <p>destinos</p>
+            </div>
+
+            <div>
+                <strong>01</strong>
+                <p>ideia diferente</p>
+            </div>
+
+            <div>
+                <strong>∞</strong>
+                <p>memórias</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" class="como-funciona">
+        <div class="circulo">
+            <div class="simbolo">≈</div>
+        </div>
+
+        <div class="processo">
+            <p class="subtitulo">COMO FUNCIONA</p>
+
+            <h2>
+                Uma ideia simples.
+                <span>Uma lembrança incomum.</span>
+            </h2>
+
+            <div class="passo">
+                <strong>01</strong>
+                <div>
+                    <h3>Escolha o destino</h3>
+                    <p>
+                        Explore a coleção e encontre o destino
+                        que mais combina com a sua história.
+                    </p>
+                </div>
+            </div>
+
+            <div class="passo">
+                <strong>02</strong>
+                <div>
+                    <h3>Descubra sua inspiração</h3>
+                    <p>
+                        Cada garrafa representa uma atmosfera
+                        temática inspirada no destino escolhido.
+                    </p>
+                </div>
+            </div>
+
+            <div class="passo">
+                <strong>03</strong>
+                <div>
+                    <h3>Guarde ou presenteie</h3>
+                    <p>
+                        Escolha uma lembrança diferente para
+                        manter por perto ou oferecer a alguém especial.
+                    </p>
+                </div>
+            </div>
+
+            <a href="#lugares" class="botao-principal">
+                Escolher meu vento ↗
+            </a>
+        </div>
+    </section>
+
+    <!-- DESTINOS -->
+    <section id="lugares" class="lugares">
+        <div class="titulo-secao">
+            <p class="subtitulo">COLEÇÃO 01 · DESTINOS COM HISTÓRIA</p>
+
+            <h2>
+                Escolha o lugar.
+                <span>Encontre o seu significado.</span>
+            </h2>
+
+            <p>
+                Cada destino carrega uma atmosfera diferente.
+                Escolha o que combina com você ou encontre uma
+                lembrança especial para presentear alguém.
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <!-- EVEREST -->
+            <article class="card">
+                <div class="imagem everest">
+                    <span>🇳🇵 NEPAL</span>
+                </div>
+
+                <div class="card-conteudo">
+                    <small>01 · EVEREST</small>
+                    <h3>Vento do Everest</h3>
+
+                    <p class="descricao-produto">
+                        Para quem sonha alto. Inspirado na grandiosidade
+                        do Himalaia, representa a vontade de explorar
+                        o desconhecido e lembrar de tudo aquilo que
+                        ainda queremos conquistar.
+                    </p>
+
+                    <p class="preco-produto">R$ 89,90</p>
+
+                    <button
+                        type="button"
+                        class="botao-link"
+                        onclick="abrirModal('Everest')">
+                        Conhecer o vento →
+                    </button>
+                </div>
+            </article>
+
+            <!-- RIO DE JANEIRO -->
+            <article class="card">
+                <div class="imagem rio">
+                    <span>🇧🇷 BRASIL</span>
+                </div>
+
+                <div class="card-conteudo">
+                    <small>02 · RIO DE JANEIRO</small>
+                    <h3>Brisa do Rio</h3>
+
+                    <p class="descricao-produto">
+                        Para quem encontra beleza nas coisas simples.
+                        Inspirada no encontro entre o mar e as montanhas,
+                        representa a leveza de aproveitar o presente
+                        e guardar momentos especiais.
+                    </p>
+
+                    <p class="preco-produto">R$ 79,90</p>
+
+                    <button
+                        type="button"
+                        class="botao-link"
+                        onclick="abrirModal('Rio de Janeiro')">
+                        Conhecer o vento →
+                    </button>
+                </div>
+            </article>
+
+            <!-- SANTORINI -->
+            <article class="card">
+                <div class="imagem santorini">
+                    <span>🇬🇷 GRÉCIA</span>
+                </div>
+
+                <div class="card-conteudo">
+                    <small>03 · SANTORINI</small>
+                    <h3>Vento do Egeu</h3>
+
+                    <p class="descricao-produto">
+                        Para quem coleciona momentos extraordinários.
+                        Inspirado nas paisagens das ilhas gregas,
+                        representa a beleza de desacelerar e
+                        transformar instantes em grandes memórias.
+                    </p>
+
+                    <p class="preco-produto">R$ 99,90</p>
+
+                    <button
+                        type="button"
+                        class="botao-link"
+                        onclick="abrirModal('Santorini')">
+                        Conhecer o vento →
+                    </button>
+                </div>
+            </article>
+
+            <!-- SAARA -->
+            <article class="card">
+                <div class="imagem saara">
+                    <span>🇲🇦 MARROCOS</span>
+                </div>
+
+                <div class="card-conteudo">
+                    <small>04 · SAARA</small>
+                    <h3>Vento do Saara</h3>
+
+                    <p class="descricao-produto">
+                        Para quem aprendeu a gostar do silêncio.
+                        Inspirado nas dunas de Merzouga, representa
+                        a coragem de seguir em frente quando o caminho
+                        ainda não está desenhado.
+                    </p>
+
+                    <p class="preco-produto">R$ 94,90</p>
+
+                    <button
+                        type="button"
+                        class="botao-link"
+                        onclick="abrirModal('Saara')">
+                        Conhecer o vento →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PATAGÔNIA -->
+            <article class="card">
+                <div class="imagem patagonia">
+                    <span>🇦🇷 ARGENTINA</span>
+                </div>
+
+                <div class="card-conteudo">
+                    <small>05 · PATAGÔNIA</small>
+                    <h3>Vento da Patagônia</h3>
+
+                    <p class="descricao-produto">
+                        Para quem gosta de recomeçar. Inspirado nos
+                        lagos e nas montanhas do fim do mundo,
+                        representa a força de quem atravessa
+                        o inverno sem perder a direção.
+                    </p>
+
+                    <p class="preco-produto">R$ 109,90</p>
+
+                    <button
+                        type="button"
+                        class="botao-link"
+                        onclick="abrirModal('Patagônia')">
+                        Conhecer o vento →
+                    </button>
+                </div>
+            </article>
+
+            <!-- QUIOTO -->
+            <article class="card">
+                <div class="imagem quioto">
+                    <span>🇯🇵 JAPÃO</span>
+                </div>
+
+                <div class="card-conteudo">
+                    <small>06 · QUIOTO</small>
+                    <h3>Brisa de Quioto</h3>
+
+                    <p class="descricao-produto">
+                        Para quem cultiva os próprios rituais.
+                        Inspirada nos caminhos de torii e nos jardins
+                        de templo, representa a serenidade de quem
+                        faz cada coisa no seu tempo.
+                    </p>
+
+                    <p class="preco-produto">R$ 84,90</p>
+
+                    <button
+                        type="button"
+                        class="botao-link"
+                        onclick="abrirModal('Quioto')">
+                        Conhecer o vento →
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contato">
+        <p class="subtitulo">FAÇA PARTE</p>
+
+        <h2>
+            Qual vento você
+            <span>levaria para casa?</span>
+        </h2>
+
+        <p>
+            Cadastre seu e-mail para receber novidades
+            sobre a coleção e novos destinos.
+        </p>
+
+        <form id="formulario">
+            <input
+                type="text"
+                id="nome"
+                placeholder="Seu nome"
+                autocomplete="name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Seu e-mail"
+                autocomplete="email"
+                required>
+
+            <button type="submit">
+                Quero receber novidades
+            </button>
+        </form>
+
+        <p id="mensagem" aria-live="polite"></p>
+
+        <p class="chamada-avaliacao">
+            Já tem uma garrafa em casa?
+            <a href="#avaliacoes">Conte como foi a sua experiência</a>
+        </p>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section id="avaliacoes" class="avaliacoes">
+
+        <div class="avaliacao-topo">
+            <p class="subtitulo">AVALIAÇÃO DOS PRODUTOS</p>
+
+            <h2>
+                Conte o que a sua
+                <span>garrafa guardou.</span>
+            </h2>
+
+            <p class="descricao">
+                Cada vento encontra uma história diferente.
+                Deixe a sua avaliação e ajude quem ainda está
+                escolhendo o primeiro destino da coleção.
+            </p>
+        </div>
+
+        <div class="resumo-nota">
+            <div class="resumo-media">
+                <strong id="mediaGeral">0,0</strong>
+                <span>de 5</span>
+            </div>
+
+            <div class="resumo-texto">
+                <p class="resumo-estrelas" id="estrelasMedia">☆☆☆☆☆</p>
+                <p class="avaliacao-meta" id="totalAvaliacoes">
+                    Nenhuma avaliação registrada ainda.
+                </p>
+            </div>
+        </div>
+
+        <div class="avaliacao-grid">
+
+            <!-- FORMULÁRIO DE AVALIAÇÃO -->
+            <div class="bloco-avaliacao">
+                <h3 class="titulo-bloco">Deixe sua avaliação</h3>
+
+                <form id="formAvaliacao" class="form-avaliacao">
+
+                    <div class="campo">
+                        <label for="produtoAvaliado">Qual vento você comprou?</label>
+
+                        <select id="produtoAvaliado" required>
+                            <option value="">Escolha um destino</option>
+                            <option value="Vento do Everest">Vento do Everest</option>
+                            <option value="Brisa do Rio">Brisa do Rio</option>
+                            <option value="Vento do Egeu">Vento do Egeu</option>
+                            <option value="Vento do Saara">Vento do Saara</option>
+                            <option value="Vento da Patagônia">Vento da Patagônia</option>
+                            <option value="Brisa de Quioto">Brisa de Quioto</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="campo estrelas">
+                        <legend>Sua nota</legend>
+
+                        <div class="estrelas-opcoes">
+                            <input type="radio" name="nota" id="nota5" value="5">
+                            <label for="nota5" title="5 estrelas">★</label>
+
+                            <input type="radio" name="nota" id="nota4" value="4">
+                            <label for="nota4" title="4 estrelas">★</label>
+
+                            <input type="radio" name="nota" id="nota3" value="3">
+                            <label for="nota3" title="3 estrelas">★</label>
+
+                            <input type="radio" name="nota" id="nota2" value="2">
+                            <label for="nota2" title="2 estrelas">★</label>
+
+                            <input type="radio" name="nota" id="nota1" value="1">
+                            <label for="nota1" title="1 estrela">★</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="campo">
+                        <label for="nomeAvaliacao">Seu nome</label>
+
+                        <input
+                            type="text"
+                            id="nomeAvaliacao"
+                            placeholder="Como você quer aparecer aqui"
+                            autocomplete="name"
+                            maxlength="40"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="comentarioAvaliacao">Seu comentário</label>
+
+                        <textarea
+                            id="comentarioAvaliacao"
+                            placeholder="O que essa memória representa para você?"
+                            maxlength="400"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="botao-principal">
+                        Publicar avaliação
+                    </button>
+
+                    <p id="mensagemAvaliacao" aria-live="polite"></p>
+                </form>
+
+                <p class="aviso-demo">
+                    Esta área é uma demonstração. As avaliações ficam
+                    guardadas apenas neste navegador, sem envio para
+                    um servidor.
+                </p>
+            </div>
+
+            <!-- LISTA DE AVALIAÇÕES -->
+            <div class="bloco-avaliacao">
+                <div class="cabecalho-lista">
+                    <h3 class="titulo-bloco">O que já disseram</h3>
+
+                    <label class="filtro-avaliacao" for="filtroProduto">
+                        <span>Filtrar</span>
+
+                        <select id="filtroProduto">
+                            <option value="todos">Todos os destinos</option>
+                            <option value="Vento do Everest">Vento do Everest</option>
+                            <option value="Brisa do Rio">Brisa do Rio</option>
+                            <option value="Vento do Egeu">Vento do Egeu</option>
+                            <option value="Vento do Saara">Vento do Saara</option>
+                            <option value="Vento da Patagônia">Vento da Patagônia</option>
+                            <option value="Brisa de Quioto">Brisa de Quioto</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div id="listaAvaliacoes" class="lista-avaliacoes"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <a href="#inicio" class="logo">
+            <span>≈</span> VENTOS
+        </a>
+
+        <p>Memórias engarrafadas de lugares inesquecíveis.</p>
+
+        <div class="links-footer">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#lugares">Destinos</a>
+            <a href="#contato">Contato</a>
+            <a href="#avaliacoes">Avaliações</a>
+        </div>
+
+        <small>© 2026 Ventos — Projeto acadêmico</small>
+    </footer>
+
+    <!-- MODAL DO PRODUTO -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div
+            class="modal-conteudo"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloModal">
+
+            <button
+                type="button"
+                class="fechar"
+                onclick="fecharModal()"
+                aria-label="Fechar janela">
+                ×
+            </button>
+
+            <p class="subtitulo">VENTOS · COLEÇÃO ESPECIAL</p>
+
+            <h2 id="tituloModal">Vento do Everest</h2>
+
+            <p id="textoModal"></p>
+
+            <p id="precoModal" class="preco-produto"></p>
+
+            <button
+                type="button"
+                class="botao-principal"
+                id="botaoAdicionar"
+                onclick="adicionarProduto()">
+                Quero guardar essa memória
+            </button>
+        </div>
+    </div>
+
+    <!-- CARRINHO -->
+    <div id="carrinho" class="carrinho-overlay" aria-hidden="true">
+        <aside
+            class="carrinho-painel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloCarrinho">
+
+            <div class="carrinho-cabecalho">
+                <div>
+                    <small>VENTOS · SUA COLEÇÃO</small>
+                    <h2 id="tituloCarrinho">Meu carrinho</h2>
+                </div>
+
+                <button
+                    type="button"
+                    class="fechar-carrinho"
+                    onclick="fecharCarrinho()"
+                    aria-label="Fechar carrinho">
+                    ×
+                </button>
+            </div>
+
+            <div id="listaCarrinho">
+                <p class="carrinho-vazio">
+                    Sua próxima memória começa aqui.
+                    Escolha um destino para descobrir qual história combina com você.
+                </p>
+            </div>
+
+            <div class="carrinho-rodape">
+                <div class="linha-total">
+                    <span>Itens no carrinho</span>
+                    <strong id="contadorCarrinhoPainel">0</strong>
+                </div>
+
+                <div class="linha-total total-grande">
+                    <strong>Total</strong>
+                    <strong id="totalCarrinho">R$ 0,00</strong>
+                </div>
+
+                <button
+                    type="button"
+                    class="botao-finalizar"
+                    onclick="finalizarCompra()">
+                    Finalizar pedido
+                </button>
+
+                <button
+                    type="button"
+                    class="botao-continuar"
+                    onclick="fecharCarrinho()">
+                    Continuar explorando
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
