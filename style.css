@@ -579,48 +579,49 @@ button {
 .everest {
     background-image:
         linear-gradient(135deg, rgba(39, 57, 66, .05), rgba(20, 36, 43, .18)),
-        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85");
+        url("assets/everest.jpeg");
     background-position: center 50%;
 }
 
 /* Imagem do Rio */
 .rio {
     background-image:
-        linear-gradient(135deg, rgba(34, 78, 63, .08), rgba(30, 44, 39, .18)),
-        url("https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1200&q=85");
+        linear-gradient(135deg, rgba(39, 57, 66, .05), rgba(20, 36, 43, .18)),
+        url("assets/rio.jpeg");
     background-position: center 50%;
 }
 
 /* Imagem de Santorini */
 .santorini {
     background-image:
-        linear-gradient(135deg, rgba(44, 100, 115, .06), rgba(30, 44, 39, .12)),
-        url("https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=85");
+        linear-gradient(135deg, rgba(39, 57, 66, .05), rgba(20, 36, 43, .18)),
+        url("assets/santorini.jpeg");
     background-position: center 50%;
 }
 
 /* Imagem do Saara */
 .saara {
     background-image:
-        linear-gradient(135deg, rgba(120, 78, 36, .06), rgba(60, 38, 20, .16)),
-        url("https://images.unsplash.com/photo-1535038743996-5cc170e89591?auto=format&fit=crop&w=1200&q=85");
-    background-position: center 55%;
+        linear-gradient(135deg, rgba(39, 57, 66, .05), rgba(20, 36, 43, .18)),
+        url("assets/saara.jpeg");
+    background-position: center 50%;
 }
+
 
 /* Imagem da Patagônia */
 .patagonia {
     background-image:
-        linear-gradient(135deg, rgba(40, 70, 90, .06), rgba(25, 40, 48, .18)),
-        url("https://images.unsplash.com/photo-1558517286-8a9cb0b8c793?auto=format&fit=crop&w=1200&q=85");
+        linear-gradient(135deg, rgba(39, 57, 66, .05), rgba(20, 36, 43, .18)),
+        url("assets/patagonia.jpeg");
     background-position: center 50%;
 }
 
 /* Imagem de Quioto */
 .quioto {
     background-image:
-        linear-gradient(135deg, rgba(120, 60, 40, .06), rgba(45, 30, 28, .16)),
-        url("https://images.unsplash.com/photo-1558862107-d49ef2a04d72?auto=format&fit=crop&w=1200&q=85");
-    background-position: center 45%;
+        linear-gradient(135deg, rgba(39, 57, 66, .05), rgba(20, 36, 43, .18)),
+        url("assets/quioto.jpeg");
+    background-position: center 50%;
 }
 
 .card-conteudo {
